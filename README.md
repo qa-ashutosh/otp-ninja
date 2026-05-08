@@ -1,10 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/qa-ashutosh/otp-ninja/main/assets/banner.svg" alt="otp-ninja" width="100%" />
-
-<br />
-
-<h1>otp-ninja</h1>
+<h1>🥷 otp-ninja</h1>
 
 <p><strong>The unified OTP toolkit built for QA automation engineers.</strong><br />Email · SMS · TOTP. One package. Zero compromise.</p>
 
