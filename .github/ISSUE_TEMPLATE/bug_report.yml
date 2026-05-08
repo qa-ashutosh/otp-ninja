@@ -1,0 +1,55 @@
+name: Bug Report
+description: Something is not working correctly
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening an issue, enable debug mode (`OTP_NINJA_DEBUG=true`) and copy the full output below.
+
+  - type: input
+    id: version
+    attributes:
+      label: otp-ninja version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      placeholder: "20.11.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: provider
+    attributes:
+      label: Provider
+      options:
+        - Email (Gmail)
+        - Email (Outlook)
+        - Email (Other IMAP)
+        - SMS (Twilio)
+        - SMS (Vonage)
+        - TOTP
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Error diagnostic output
+      description: Paste the output of `err.toDiagnosticString()` here. Credentials are automatically masked.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Minimal code snippet that triggers the issue.
+    validations:
+      required: true

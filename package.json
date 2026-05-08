@@ -1,0 +1,93 @@
+{
+  "name": "@ashforge/otp-ninja",
+  "version": "1.0.0",
+  "description": "The unified OTP toolkit for QA automation engineers. Email, SMS, and TOTP in one package.",
+  "keywords": [
+    "otp",
+    "one-time-password",
+    "totp",
+    "2fa",
+    "mfa",
+    "email-otp",
+    "sms-otp",
+    "imap",
+    "twilio",
+    "vonage",
+    "qa",
+    "automation",
+    "playwright",
+    "cypress",
+    "webdriverio",
+    "testing",
+    "typescript"
+  ],
+  "homepage": "https://github.com/qa-ashutosh/otp-ninja#readme",
+  "bugs": {
+    "url": "https://github.com/qa-ashutosh/otp-ninja/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qa-ashutosh/otp-ninja.git"
+  },
+  "license": "MIT",
+  "author": "Ashutosh Parihar",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist/ coverage/ *.tsbuildinfo",
+    "prebuild": "npm run clean",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src tests --ext .ts",
+    "lint:fix": "eslint src tests --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "imapflow": "^1.0.162"
+  },
+  "peerDependencies": {
+    "@vonage/server-sdk": ">=3.0.0",
+    "twilio": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "twilio": {
+      "optional": true
+    },
+    "@vonage/server-sdk": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

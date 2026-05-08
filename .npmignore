@@ -1,0 +1,37 @@
+# Source files
+src/
+
+# Tests
+tests/
+
+# Examples
+examples/
+
+# GitHub workflows & configs
+.github/
+
+# Config files
+.eslintrc.cjs
+tsconfig.json
+tsup.config.ts
+jest.config.js
+
+# Environment examples
+.env.example
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage reports
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
